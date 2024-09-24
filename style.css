@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", system-ui;
+}
+
+body {
+  background-color: #f9f7f3;
+}
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(1px);
+  transition: 0.5s ease;
+  color: black;
+}
+
+main.active {
+  background: #0000001a;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* header css */
+header {
+  padding: 20px 0px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(148 163 184);
+  border-radius: 30px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog_btn {
+  background-color: #b4f461;
+  color: #000;
+  padding: 9px 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  transition: transform 0.1s ease;
+}
+
+.blog_btn:active,
+.donation_btn:active,
+.histroy_btn:active,
+.donate-box button:active {
+  transform: scale(0.95);
+}
+
+.navbar .logo,
+.donate_amount {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar .logo img {
+  width: 40px;
+}
+
+.navbar .logo span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.donate_amount {
+  gap: 10px;
+}
+
+.donate_amount span {
+  color: #111111;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.donate_btn {
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+
+.donation_btn,
+.histroy_btn {
+  color: #000;
+  padding: 9px 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  transition: transform 0.1s ease;
+  border: 1.5px solid #11111138;
+  background-color: transparent;
+}
+
+.histroy_btn {
+  border: 1.5px solid #11111138;
+  background-color: transparent;
+}
+
+.donation_btn {
+  margin-right: 10px;
+}
+
+.donation_btn.active {
+  background-color: #b4f461;
+  border: 1.5px solid #b4f461;
+}
+
+.histroy_btn.active {
+  background-color: #b4f461;
+  border: 1.5px solid #b4f461;
+}
+
+/* donate css */
+.donate-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+  border: 1.3px solid #11111138;
+  padding: 25px;
+  border-radius: 15px;
+}
+.donate-box:first-child {
+  margin-top: 215px;
+}
+
+.donate-box.active {
+  display: none;
+}
+
+.donate-box:last-child {
+  margin-bottom: 40px;
+}
+
+.donate-box .donate_image {
+  max-width: 522px;
+  width: 100%;
+  height: 355px;
+  object-fit: cover;
+  aspect-ratio: 2/1;
+  border-radius: 10px;
+}
+
+.donate_coin_box {
+  background-color: rgba(17, 17, 17, 0.05);
+  display: inline-block;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.donate_coin {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.donate_coin img {
+  margin-right: 8px;
+}
+
+.donate_coin p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000d4;
+  margin-bottom: 0px !important;
+}
+
+.donate-box h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.donate-box p {
+  color: #3f3737;
+  margin-bottom: 20px;
+  line-height: 26px;
+}
+
+.donate-box input {
+  width: 100%;
+  height: 46px;
+  outline: 0;
+  border-radius: 8px;
+  border: 1px solid #11111138;
+  padding: 0px 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  background-color: #f9f7f3;
+}
+
+.donate-box input::placeholder {
+  text-transform: capitalize;
+}
+
+.donate-box button {
+  background-color: #b4f461;
+  width: 100%;
+  height: 45px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+/* history css */
+.histroy_wrapper {
+  display: none;
+}
+.histroy-box {
+  border: 1.3px solid #11111138;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.histroy_wrapper.active {
+  display: block;
+  margin-top: 205px;
+}
+
+.histroy-box:last-child {
+  margin-bottom: 40px;
+}
+
+.histroy-box h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.histroy-box p {
+  color: #000000d4;
+  font-size: 18px;
+}
+
+@media (max-width: 1000px) {
+  .donate-box {
+    flex-direction: column;
+  }
+
+  .donate-box .donate_imag {
+    width: 100%;
+  }
+}
